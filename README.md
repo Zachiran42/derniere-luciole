@@ -1,24 +1,26 @@
 # Dernière Luciole
 
-Rallume les lanternes d’une forêt endormie. Chaque déplacement consomme ta lumière : choisis ton chemin et retrouve la sortie.
+Rapporte les graines puis rejoins la sortie avant de manquer de lumière. Choisis tes détours : nectar, recharges uniques, ronces et portes changent le meilleur trajet.
 
 **Android 7.0+ avec Android System WebView à jour · 100 % hors ligne dans l’APK · Sans compte · Sans publicité · MIT**
 
 - [Jouer sur la page du jeu](https://zachiran42.github.io/derniere-luciole/)
-- [Télécharger l’APK signé de test](docs/downloads/derniere-luciole-1.0.0.apk)
+- [Télécharger l’APK signé de test](docs/downloads/derniere-luciole-1.1.0.apk)
 - [Signaler un problème](https://github.com/Zachiran42/derniere-luciole/issues)
 
 ## Jouer
 
-1. Touche une case voisine ou glisse dans une direction.
-2. Les lanternes restaurent ta lumière. Évite les détours.
-3. Termine les 20 clairières et améliore tes résultats.
+1. Tapote les flèches ou une direction autour de la luciole.
+2. Ramasse toutes les graines ◇ puis rejoins E. Chaque pas coûte de la lumière.
+3. Le nectar ajoute 3, les ronces coûtent 2 ; garde les lanternes pour le bon moment.
 
-Sur ordinateur : flèches, WASD ou ZQSD. Échap met le jeu en pause. Une partie en cours et la progression sont conservées localement. Les données de la démo web et celles de l’APK sont indépendantes.
+TÉLÉPHONE · Flèches ou tap directionnel · ORDINATEUR · Flèches / ZQSD · PAUSE · Échap
+
+La progression reste stockée localement. Les règles de la version1.1 changent : les anciennes parties en cours redémarrent, les déblocages et améliorations permanentes sont conservés.
 
 ## Installer sur Android
 
-Télécharger l’APK depuis ce dépôt ou sa page. Ouvrir le fichier sur Android et autoriser l’installation pour l’application utilisée pour le téléchargement si Android le demande. L’APK 1.0.0 est une version de test signée avec une clé de développement. Une signature de production stable est recommandée avant une distribution durable.
+Télécharger l’APK depuis ce dépôt ou sa page. Ouvrir le fichier sur Android et autoriser l’installation pour l’application utilisée pour le téléchargement si Android le demande. L’APK 1.1.0 est une version de test signée avec une clé de développement. Une signature de production stable est recommandée avant une distribution durable.
 
 ## Développer et compiler
 
@@ -48,6 +50,10 @@ Aucune permission INTERNET dans le manifeste Android. Pas de télémétrie ni d�
 
 Le code, les graphismes procéduraux et les textes originaux sont sous [licence MIT](LICENSE). Le wrapper Gradle et les outils de compilation tiers conservent leurs propres licences.
 
-## Version 1.0.0
+## Version 1.1.0
 
-Première version jouable. Le comportement tactile et les performances peuvent varier selon le WebView Android de l’appareil.
+Version enrichie avec commandes et difficulté revues. Le comportement tactile et les performances peuvent varier selon le WebView Android de l’appareil.
+
+## Nouveautés 1.1.0
+
+Cartes avec boucles et alternatives. Les graines deviennent l’objectif ; lanternes facultatives à usage unique, nectar +3, ronces à coût 2 et portes commandées par interrupteur. Les routes courtes et les détours de recharge n’offrent pas la même marge de sécurité.
