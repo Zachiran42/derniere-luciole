@@ -57,3 +57,21 @@ Version enrichie avec commandes et difficulté revues. Le comportement tactile e
 ## Nouveautés 1.1.0
 
 Cartes avec boucles et alternatives. Les graines deviennent l’objectif ; lanternes facultatives à usage unique, nectar +3, ronces à coût 2 et portes commandées par interrupteur. Les routes courtes et les détours de recharge n’offrent pas la même marge de sécurité.
+
+## Publication des mises à jour pour Cercle
+
+Le workflow `.github/workflows/release-apk.yml` publie automatiquement l’APK déjà compilé et signé lors d’un push sur `main`. Il utilise le jeton temporaire GitHub du dépôt ; aucune clé de signature n’est envoyée à GitHub Actions.
+
+1. Augmenter `versionName` et `versionCode` dans `app/build.gradle`.
+
+2. Compiler l’APK avec la même clé de signature que les versions distribuées.
+
+3. Ajouter `docs/downloads/derniere-luciole-<versionName>.apk` et son fichier `.apk.sha256`.
+
+4. Pousser l’APK, son empreinte et la configuration de version sur `main`.
+
+Le script `tools/publish-apk.py` contrôle la signature, le paquet, la version et le SHA-256 avant de créer une Release contenant l’APK, son empreinte et la licence MIT. Une version publiée est conservée sans remplacement. Un push du code seul ne produit pas un APK de distribution.
+
+Cercle recherche les nouvelles Releases au démarrage, à la demande et lors de sa vérification périodique. Les utilisateurs confirment ensuite le téléchargement et l’installation Android.
+
+Première exécution validée : https://github.com/Zachiran42/derniere-luciole/actions/runs/41019323688
